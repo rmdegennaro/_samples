@@ -1,10 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><<change to host name>> Webserver Page: It works!!! (riotsu)</title>
-    <style type="text/css" media="screen">
-  * {
+<!--
+  scroll down a bit for javascript variables to change displayed servername & path
+  or search for CHANGEME and replace it as appropriate
+-->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>CHANGEME Webserver Page: It works!!! (CHANGEME)</title>
+  <style type="text/css" media="screen">
+  *
+  {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
   }
@@ -132,13 +135,24 @@
   }
     </style>
   </head>
+  <script>
+  window.onload = function(){
+    var serverName = "GEMINI"
+    var path = "/riosites/"
+    var fullURL = serverName + path
+
+    document.getElementById('servername').innerHTML = serverName;
+    document.getElementById('path').innerHTML = path;
+    document.getElementById('splash_image').innerHTML = fullURL;
+    document.title = serverName + " Webserver Page: It works!!! (" + serverName + path + ")"
+  };
+
+  </script>
   <body>
     <div class="main_page">
       <div class="page_header floating_element">
-        <img src="http://riotsu.com/zz9pluralzalpha/dummy_site/images/dragonfly02-fakepic-dark-480x480-full-color.jpg" alt="RioTsu" height="85" width="85" class="floating_element"/>
-        <span class="floating_element">
-          Nothing to see here, move along.
-        </span>
+        <img id="splash_image" src="http://riotsu.com/zz9pluralzalpha/dummy_site/images/dragonfly02-fakepic-dark-480x480-full-color.jpg" alt="CHANGEME" height="85" width="85" class="floating_element"/>
+        <span class="floating_element">Nothing to see here, move along.</span>
       </div>
       <div class="content_section floating_element">
 
@@ -158,7 +172,9 @@
 
         <div class="content_section_text">
             <p>
-              SERVER NAME:  <<change to host name>>
+              SERVER NAME:  <a id="servername">CHANGEME</a>
+              <br/>
+              PATH:  <a id="path">CHANGEME</a>
             </p>
         </div>
       </div>
